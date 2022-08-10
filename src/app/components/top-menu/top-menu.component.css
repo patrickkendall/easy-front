@@ -1,0 +1,310 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-mobile {
+    height: 100px;
+}
+
+::ng-deep .modal-header {
+    background-color: rgb(243, 244, 246);
+}
+
+.nav-items {
+    margin-top: -5px;
+  }
+
+  ::ng-deep .toast-container {
+    position: absolute;
+    top: 60px;
+    right: 5px;
+    margin: 10px;
+    z-index: 9999;
+  }
+  .toast-top-right {
+    position: absolute;
+    right: 0px;
+    top: 60px;
+  }
+
+.mobile-menu-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 40px;
+  color: white;
+  width: 100px;
+  height: 50px;
+  z-index: 1;
+  visibility: hidden;
+}
+
+.dropdown-content-mobile {
+    position: absolute;
+    background-color: rgb(243, 244, 246);
+    top: 80px;
+    left: 10px;
+    visibility: hidden;
+    display: none;
+    box-shadow: 2px 2px 2px rgb(214, 214, 214);
+    z-index: 100;
+    font-weight: bold;
+    margin-top: 0px;
+    padding: 10px;
+    border-radius: 15px;
+    white-space: nowrap;
+  }
+
+.mobile-menu {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 40px;
+  color: white;
+  z-index: 1;
+  width: 100px;
+  height: 50px;
+  visibility: hidden;
+}
+
+.logout {
+  background-image: linear-gradient(
+    120deg,
+    hsl(0, 0%, 54%),
+    hsl(0, 0%, 18%)
+  );
+}
+
+.mymodal {
+  margin-top: -100px;
+}
+
+.menu-desktop {
+  position: absolute;
+  top: 15px;
+  right: 200px;
+}
+
+.menu-desktop-2 {
+  position: absolute;
+  top: 15px;
+  right: 200px;
+}
+
+.modal-backdrop {
+  background-color: black;
+}
+
+.a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: hsl(0, 0%, 0%);
+  margin-left: 2em;;
+  font-size: 20px;
+  margin-top: -20px; 
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 100 !important;
+}
+
+.a3 {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: -20px; 
+    cursor: pointer;
+    padding: 20px;
+    color: black;
+    font-size: 20px;
+    z-index: 100 !important;
+  }
+  
+
+.a2 {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: hsl(0, 0%, 0%);
+    margin-left: 5px;;
+    font-size: 20px;
+    margin-top: -20px; 
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 100 !important;
+  }
+.mobile-menu {
+  top: 0px;
+  left: 0px;
+}
+
+.button {
+  position: absolute;
+  right: 50px;
+}
+
+p {
+  padding: 15px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 150;
+  border-radius: 15px;
+  font-weight: bold;
+  background-color: rgb(243, 244, 246);
+  display: none;
+  box-shadow: 2px 2px 2px rgb(214, 214, 214);
+  padding: 10px;
+  white-space: nowrap;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.dropdown-mobile {
+    position: absolute;
+    top: 10px;
+    left: 100px;;
+    z-index: 10000;
+}
+
+.dropdown-mobile:hover .dropdown-content {
+  display: block;
+  visibility: visible;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  visibility: visible;
+}
+
+.dropdown-content:hover .dropdown-content {
+  display: block;
+}
+
+.desktop-dropdown {
+  padding-bottom: 20px;
+}
+
+.nav-bar {
+  z-index: 5;;
+  box-shadow: 2px 2px 3px rgba(218, 218, 218, 0.778) !important;
+  height: 60px;
+  background-color: rgb(243, 244, 246);
+}
+
+.dropdown-mobile {
+  position: absolute;
+  visibility: hidden;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 1000px) {
+  .mobile-menu {
+    position: absolute;
+    top: 0px;
+    color: white;
+    border-radius: 40px;
+    padding: 10px;
+    padding-left: 15px;
+    visibility: visible !important;
+    width: 100px;
+    height: 50px;
+    padding-right: 15px;
+    left: 0px;
+  }
+
+  .dropdown-mobile {
+    position: absolute;
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    left: 0px;
+    top: 10px;
+  }
+
+  .mobile-menu {
+    width: 100px;
+    height: 50px;
+    left: 10px;
+  }
+
+  .mobile-menu-btn {
+    position: absolute !important;
+    top: 10px !important;
+    left: 10px !important;
+    width: 50px;
+    height: 50px;
+    visibility: visible !important;
+    display: block;
+    cursor: pointer;
+    width: 100px;
+  }
+
+  .dropdown-mobile:hover .dropdown-mobile {
+    position: absolute;
+    visibility: visible;
+    width: 100px;
+    height: 50px;
+    left: 10px;
+    top: 10px;
+    z-index: 10000
+  }
+
+  .mobile-menu:hover .dropdown-mobile {
+    position: absolute;
+    visibility: visible;
+    width: 100px;
+    height: 50px;
+    left: 10px;
+    top: 10px;
+    z-index: 10000
+  }
+
+  .mobile-menu:hover .dropdown-content-mobile {
+    position: absolute;
+    visibility: visible;
+    width: 100px;
+    height: 50px;
+    left: 10px;
+    top: 10px;
+    z-index: 10000
+  }
+
+  .dropdown-content-mobile {
+    display: block;
+  }
+
+  .button {
+    top: 10px;
+    margin-right: -40px;
+  }
+
+  .nav-items {
+    display: none;
+    margin-top: -5px;
+  }
+
+.button {
+    position: absolute;
+    margin-top: 0px;
+    right: 50px;
+  }
+
+  .button {
+    top: 5.8px;
+    margin-right: -40px;
+  }
+
+}

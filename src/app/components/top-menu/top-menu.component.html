@@ -1,0 +1,111 @@
+<div>
+  <nav class="nav-bar" style="box-shadow: 3px 3px 3px rgb(227, 227, 227) !important; height: 60px !important" id="navBar">
+    <img src="" alt="" />
+    <div class="nav-items">
+      <div *ngIf="!tokenSaved" class="menu-desktop" id="menuDesktop">
+        <a class="a" href="">Home</a>
+        <a class="a" routerLink="about">About</a>
+        <a class="a" routerLink="contact">Contact</a>
+      </div>
+      <div *ngIf="tokenSaved" class="menu-desktop-2" id="menuDesktop2">
+        <a *ngIf="tokenSaved"class="a" href="account">Profile</a>
+        <a *ngIf="tokenSaved"class="a" href="about">About</a>
+        <a *ngIf="tokenSaved"class="a" href="contact">Contact</a>
+        <a *ngIf="tokenSaved" class="a">Transactions</a>
+        <a *ngIf="tokenSaved" class="a">Loan Application</a>
+        <div *ngIf="tokenSaved" class="dropdown">
+          <a *ngIf="tokenSaved" class="desktop-dropdown a">More</a>
+          <div class="dropdown-content" style="margin-top: 20px;">
+            <a class="a3" style="font-weight: 500; margin-top: 60px;" href="transfers">Transfers</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="button" *ngIf="!tokenSaved" (click)="openModal(myLoginModal); closeModal(myRegisterModal)">Login</button>
+    <button class="button logout" *ngIf="tokenSaved" (click)="logout()">Logout</button>
+  </nav>
+
+  <modal #myLoginModal class="mymodal">
+    <modal-header>
+            <h1>Login</h1>
+    </modal-header>
+
+    <modal-content> 
+        <div class="login-container">
+          <div class="login-form">
+            <form>
+              <div class="form-group">
+                <label for="email" style="font-weight: bold">Email</label>
+                <input [ngModelOptions]="{standalone: true}" type="email" [(ngModel)]="email" class="form-control" id="email" placeholder="Enter email" />
+              </div>
+              <div class="form-group">
+                <label for="password" style="font-weight: bold">Password</label>
+                <input [ngModelOptions]="{standalone: true}" type="password" [(ngModel)]="password" class="form-control" id="password" placeholder="Password" />
+              </div>
+              <button (click)="login()" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+          </div>
+    </modal-content>
+
+    <modal-footer><a style="text-decoration:underline" (click)="openModal(myRegisterModal); closeModal(myLoginModal)">Don't have an account? REGISTER</a></modal-footer>
+  </modal>
+
+  <modal #myRegisterModal class="mymodal2">
+    <modal-header>
+            <h1>Register</h1>
+    </modal-header>
+
+    <modal-content> 
+        <div class="login-container">
+          <div class="login-form">
+            <form>
+              <div class="form-group">
+                <label for="email" style="font-weight: bold">Email</label>
+                <input [ngModelOptions]="{standalone: true}" type="email" [(ngModel)]="email" class="form-control" id="email" placeholder="Enter email" />
+              </div>
+              <div class="form-group">
+                <label for="email" style="font-weight: bold">Username</label>
+                <input [ngModelOptions]="{standalone: true}"  [(ngModel)]="username" class="form-control" id="email" placeholder="Enter email" />
+              </div>
+              <div class="form-group">
+                <label for="password" style="font-weight: bold">Password</label>
+                <input [ngModelOptions]="{standalone: true}" type="password" [(ngModel)]="password" class="form-control" id="password" placeholder="Password" />
+              </div>
+              <div class="form-group">
+                <label for="password" style="font-weight: bold">Confirm Password</label>
+                <input [ngModelOptions]="{standalone: true}" type="password" [(ngModel)]="password2" class="form-control" id="password" placeholder="Password" />
+              </div>
+              <button (click)="register()" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+          </div>
+    </modal-content>
+
+    <modal-footer><a style="text-decoration:underline" (click)="openModal(myLoginModal); closeModal(myRegisterModal)">Already have an account? LOGIN</a></modal-footer>
+  </modal>
+</div>
+
+<button
+  class="mobile-menu"
+  style="
+    position: absolute;
+    left: 10px;
+    top: 4.7px;
+    display: block;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+  "
+  (click)="toggleMenu()"
+>
+Menu
+</button>
+  <div class="dropdown-content-mobile" id="menu">
+    <p class="a2" routerLink="account">Profile</p>
+    <p class="a2" routerLink="about">About</p>
+    <p class="a2" href="contact.html">Contact</p>
+    <p *ngIf="tokenSaved" class="a2" href="transfers.html">Transactions</p>
+    <p *ngIf="tokenSaved" class="a2" href="Loan.html">Loan Application</p>
+    <p *ngIf="tokenSaved" class="a2" routerLink="transfers">Transfers</p>
+  </div>

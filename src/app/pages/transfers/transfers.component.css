@@ -1,0 +1,276 @@
+
+
+.justify-content-center {
+    display: flex;
+    justify-content: center;
+    z-index: -1 !important; 
+    margin-top: 0px;
+
+}
+
+.row {
+    margin-top: -100px;
+}  
+
+h1 {
+    padding: 10px;
+    margin-top: 10px;
+}
+
+input {
+    height: 40px;
+    border-radius: 3px !important;
+}
+
+select {
+    height: 40px !important;
+    border-radius: 3px !important;
+}
+
+.container {
+    position: absolute;
+    top: 100px;
+}
+
+.hero-section {
+    padding: none !important;
+    margin-top: 250px;;
+    z-index: 0;
+}
+
+
+    .form-group {
+        display: block;
+        margin-left: 20px;
+    }
+    input {
+        width: 30vw !important;
+        display: block;
+        
+    }
+    select {
+        width: 30vw !important;
+        display: block;
+    }
+
+    .description {
+        display: block;
+    }
+
+    .firstWord {
+    }
+
+    .input-group-addon {
+        display: inline-block;
+    }
+
+    .desc {
+        margin-left: 20px;
+    }
+
+  
+    @media only screen and (max-width: 800px) {
+        .justify-content-center {
+            margin-top: -70px;
+        }
+        input {
+            width: 90vw !important;
+            display: block;
+            
+        }
+        select {
+            width: 90vw !important;
+            display: block;
+        }
+      }
+
+
+    @media only screen and (max-width: 900px) {
+        .justify-content-center {
+            margin-top: -70px;
+        }
+        input {
+            width: 120vw !important;
+            display: block;
+            
+        }
+        select {
+            width: 120vw !important;
+            display: block;
+        }
+      }
+    
+  
+@media only screen and (max-width: 1000px) {
+    .hero-section {
+        margin-top: -50px;
+    }
+    .justify-content-center {
+        margin-top: -50px;
+    }
+    input {
+        width: 51vw !important;
+        display: block;
+        
+    }
+    select {
+        width: 51vw !important;
+        display: block;
+    }
+
+    .justify-content-center {
+        margin-top:0px;
+    }
+  }
+
+  @media only screen and (max-width: 1700px) {
+    .justify-content-center {
+        margin-top: -50px;
+    }
+    .hero-section {
+        margin-top: 100px;
+    }
+    input {
+        width: 70vw !important;
+        display: block;
+        
+    }
+    select {
+        width: 70vw !important;
+        display: block;
+    }
+  }
+
+  @media only screen and (max-width: 1400px) {
+    .justify-content-center {
+        margin-top: 100px;
+    }
+
+    .hero-section {
+        margin-top: 50px;
+    }
+    input {
+        width: 35vw !important;
+        display: block;
+        
+        
+    }
+    select {
+        width: 35vw !important;
+        display: block;
+    }
+  }
+
+  @media only screen and (max-width: 2400px) {
+    .justify-content-center {
+        margin-top: 70px;
+    }
+    .hero-section {
+        margin-top: 230px;
+    }
+    input {
+        width: 20vw !important;
+        display: block;
+        
+    }
+    select {
+        width: 20vw !important;
+        display: block;
+    }
+  }
+
+  
+  @media only screen and (max-width: 2200px) {
+    input {
+        width: 30vw !important;
+        display: block;
+        
+    }
+    select {
+        width: 30vw !important;
+        display: block;
+    }
+  }
+
+  @media only screen and (max-width: 3000px) {
+    input {
+        width: 45vw !important;
+        display: block;
+        
+    }
+    select {
+        width: 45vw !important;
+        display: block;
+        
+    }
+  }
+
+  @media only screen and (max-width: 3200px) {
+    input {
+        width: 35vw !important;
+        display: block;
+        
+    }
+    select {
+        width: 35vw !important;
+        display: block;
+        
+    }
+  }
+
+  @media only screen and (max-width: 2000px) {
+    .justify-content-center {
+        margin-top: 80px;
+    }
+    .hero-section {
+        margin-top: 150px;
+    }
+    input {
+        width: 70vw !important;
+        display: block;
+        
+    }
+    select {
+        width: 70vw !important;
+        display: block;
+    }
+  }
+
+  @media only screen and (max-width: 1300px) {
+    input {
+        width: 80vw !important;
+        display: block;
+        
+    }
+    select {
+        width: 80vw !important;
+        display: block;
+        
+    }
+  }
+
+  @media only screen and (max-width: 1400px) {
+    input {
+        width: 77vw !important;
+        display: block;
+        
+    }
+    select {
+        width: 77vw !important;
+        display: block;
+        
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    input {
+        width: 70vw !important;
+        display: block;
+        
+    }
+    select {
+        width: 70vw !important;
+        display: block;
+        
+    }
+  }

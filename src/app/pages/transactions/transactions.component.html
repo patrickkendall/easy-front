@@ -1,0 +1,87 @@
+
+    <body>
+        <div class="justify-content-center width-100 height-100">
+      <header class="hero-section">
+  
+            <div class="container">
+          
+              <h1 class="firstWord">Bank<span class="secondWord"> Transactions</span></h1>
+              <hr /> <br>
+               <h4 class="alert alert-default">{{account.startingBalance}}</h4>
+              
+              <div class="row">
+                <div class="col-md-12">
+          
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">Make a transaction</h3> <br>
+                    </div>
+                    <br>
+                    <div class="panel-body">
+                      <form class="form-inline">
+                        <div class="form-group">
+                          <label for="description">Description </label>
+                          <input style="margin-left: 20px;"type="text" class="form-control" id="description" placeholder="" ng-model='transaction.description'>
+                        </div>
+                        <div class="form-group" style="margin-left: 20px;">
+                          <div class="input-group">
+                            <span style="margin-left: 20px;" class="input-group-addon">$</span>
+                            <input type="number" step="0.01" min=0 class="form-control" id="amount" placeholder="0.00" ng-model="transaction.amount">
+                          </div>
+                        </div>
+                        <select style="margin-left: 20px;" class="form-control" ng-model="transaction.type">
+                          <option value='Withdraw'>Withdraw</option>
+                          <option value='Deposit'>Deposit</option>
+                        </select>
+                        <button style="margin-left: 20px;" type="submit" class="btn btn-primary" ng-click="saveTransaction()">Save</button>
+                      </form>
+                    </div>
+                  </div>
+          
+                  <hr />
+                  <p>
+                    <strong>Sort Transactions by:</strong>
+                    <select ng-model="transType" class="form-control">
+                      <option value=''>All</option>
+                      <option value='credit'>Deposit</option>
+                      <option value='debit'>Withdraw</option>
+                    </select>
+                  </p>
+                  <table class="table table-striped table-bordered table-condensed">
+                    <thead>
+                      <tr>
+                        <th>Type</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr ng-repeat="row in transactionList | filter: transType">
+                        <td ng-bind="row.type"></td>
+                        <td ng-bind="row.description"></td>
+                        <td ng-bind="row.amount | currency"></td>
+                      </tr>
+                    </tbody>
+          
+                  </table>
+                </div>
+              </div>
+            </div>
+          
+      </header>
+    </div>
+      <footer class="footer">
+        <div class="footer-container">
+         
+          <div class="menu">
+            <a href="#">About us</a>
+            <a href="#">Contact us</a>
+            <a href="transfers.html">Transactions</a>
+          </div>
+          <div class="menu">
+            <a href="Loan.html">Loan application</a>
+          </div>
+            <button>Create account</button>
+        </div>
+      </footer>
+    </body>
