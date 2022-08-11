@@ -102,7 +102,7 @@ login() {
     };
     let headers = new HttpHeaders();
     headers.set('Access-Control-Allow-Origin', '*');
-    this.http.post('http://localhost:4000/user/login', data, { headers: headers })
+    this.http.post('https://easy-back.vercel.app/user/login', data, { headers: headers })
       .subscribe((res:any) => {
         console.log(res);
         localStorage.setItem("token", res["token"])
@@ -144,11 +144,10 @@ register() {
     }
     let headers = new HttpHeaders()
     headers.set("Access-Control-Allow-Origin", "*")
-    this.http.post("http://localhost:4000/user/signup", data, { headers: headers}).subscribe(res => {
+    this.http.post("https://easy-back.vercel.app/user/signup", data, { headers: headers}).subscribe(res => {
       console.log(res)
-      this.toastr.success('"Registration Successfuladsdsad"')
+      this.toastr.success('"Registration Successful"')
       this.modalService.close(this.myRegisterModal);
-      (<HTMLElement>document.getElementById("navBar")).scrollIntoView({behavior: "smooth"})
     }, (error) => {
       this.toastr.error(JSON.stringify(error.error.message.replace(/"/g, '')))
     });

@@ -29,7 +29,7 @@ export class TransfersComponent implements OnInit {
     let headers = new HttpHeaders();
     headers.set('Access-Control-Allow-Origin', '*');
     this.http
-      .get('http://localhost:4000/transaction/transactions', {
+      .get('https://easy-back.vercel.app/transaction/transactions', {
         headers: headers,
       })
       .subscribe((res: any) => {
@@ -75,7 +75,7 @@ export class TransfersComponent implements OnInit {
       let headers = new HttpHeaders();
       headers.set('Access-Control-Allow-Origin', '*');
       this.http
-        .post('http://localhost:4000/transaction/create', data, {
+        .post('https://easy-back.vercel.app/transaction/create', data, {
           headers: headers,
         })
         .subscribe((res: any) => {

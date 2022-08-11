@@ -47,7 +47,7 @@
 .dropdown-content-mobile {
     position: absolute;
     background-color: rgb(243, 244, 246);
-    top: 80px;
+    top: 70px;
     left: 10px;
     visibility: hidden;
     display: none;

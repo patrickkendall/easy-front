@@ -102,9 +102,10 @@
 Menu
 </button>
   <div class="dropdown-content-mobile" id="menu">
-    <p class="a2" routerLink="account">Profile</p>
+    <p class="a2" routerLink="" *ngIf="!tokenSaved">Home</p>
+    <p class="a2" *ngIf="tokenSaved" routerLink="account">Profile</p>
     <p class="a2" routerLink="about">About</p>
-    <p class="a2" href="contact.html">Contact</p>
+    <p class="a2" routerLink="contact">Contact</p>
     <p *ngIf="tokenSaved" class="a2" href="transfers.html">Transactions</p>
     <p *ngIf="tokenSaved" class="a2" href="Loan.html">Loan Application</p>
     <p *ngIf="tokenSaved" class="a2" routerLink="transfers">Transfers</p>
