@@ -3,20 +3,20 @@
     <img src="" alt="" />
     <div class="nav-items">
       <div *ngIf="!tokenSaved" class="menu-desktop" id="menuDesktop">
-        <a class="a" href="">Home</a>
+        <a class="a" routerLink="">Home</a>
         <a class="a" routerLink="about">About</a>
         <a class="a" routerLink="contact">Contact</a>
       </div>
       <div *ngIf="tokenSaved" class="menu-desktop-2" id="menuDesktop2">
-        <a *ngIf="tokenSaved"class="a" href="account">Profile</a>
-        <a *ngIf="tokenSaved"class="a" href="about">About</a>
-        <a *ngIf="tokenSaved"class="a" href="contact">Contact</a>
+        <a *ngIf="tokenSaved"class="a" routerLink="account">Profile</a>
+        <a *ngIf="tokenSaved"class="a" routerLink="about">About</a>
+        <a *ngIf="tokenSaved"class="a" routerLink="contact">Contact</a>
         <a *ngIf="tokenSaved" class="a">Transactions</a>
         <a *ngIf="tokenSaved" class="a">Loan Application</a>
         <div *ngIf="tokenSaved" class="dropdown">
           <a *ngIf="tokenSaved" class="desktop-dropdown a">More</a>
           <div class="dropdown-content" style="margin-top: 20px;">
-            <a class="a3" style="font-weight: 500; margin-top: 60px;" href="transfers">Transfers</a>
+            <a class="a3" style="font-weight: 500; margin-top: 60px;" routerLink="transfers">Transfers</a>
           </div>
         </div>
       </div>
@@ -106,7 +106,7 @@ Menu
     <p class="a2" *ngIf="tokenSaved" routerLink="account">Profile</p>
     <p class="a2" routerLink="about">About</p>
     <p class="a2" routerLink="contact">Contact</p>
-    <p *ngIf="tokenSaved" class="a2" href="transfers.html">Transactions</p>
-    <p *ngIf="tokenSaved" class="a2" href="Loan.html">Loan Application</p>
+    <p *ngIf="tokenSaved" class="a2" routerLink="transfers.html">Transactions</p>
+    <p *ngIf="tokenSaved" class="a2" routerLink="Loan.html">Loan Application</p>
     <p *ngIf="tokenSaved" class="a2" routerLink="transfers">Transfers</p>
   </div>
